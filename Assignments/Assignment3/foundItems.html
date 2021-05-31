@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="" ng-repeat="item in search.foundItems">
+    <div class="clearfix" ng-if="$index % 2 == 0">
+
+    </div>
+  <div class="col-md-6">
+    <div class="jumbotron">
+      <h2>{{item.name}}</h2>
+      <h3>{{item.short_name}}</h3>
+      <p>{{item.description}}</p>
+      <button  class="btn btn-lg btn-primary" type="button" name="Don't want this one!" ng-click="search.onRemove({index:$index})">Don't want this one!</button>
+    </div>
+     </div>
+  </div>
+</div>
+<div class="alert alert-danger" ng-show="search.onEmpty">{{search.onEmpty}}</div>
+
+<!-- <table>
+  <tr>
+    <th>
+      Short Name
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      Description
+    </th>
+  </tr>
+
+  <tr ng-repeat="item in search.foundItems">
+    <td>
+      {{item.short_name}}
+    </td>
+    <td>
+      {{item.name}}
+    </td>
+    <td>
+        {{item.description}}
+    </td>
+    <td>
+      <button type="button" name="Don't want this one!" ng-click="search.onRemove({index:$index})">Don't want this one!</button>
+    </td>
+  </tr>
+</table> -->
